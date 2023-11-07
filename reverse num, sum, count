@@ -18,7 +18,7 @@ int main()
         }
     }
     
-    printf("\nCount %d\n", count);
-    printf("Sum %d", sum);
+    printf("\nCount = %d\n", count);
+    printf("Sum = %d", sum);
     
 }
