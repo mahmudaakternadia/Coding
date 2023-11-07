@@ -7,7 +7,7 @@ int main() {
     scanf ("%d", &n);
     
     for (int i=1; i<=n; i++){
-        sum+=i;
+        sum+=i;  //sum= sum+i
         
     }
     printf ("Sum of %d is %d\n", n, sum);
