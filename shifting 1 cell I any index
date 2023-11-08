@@ -1,0 +1,21 @@
+#include<stdio.h>
+#define size 10
+int main(){
+    
+    int m,n; //index value
+    printf ("Enter shift start range: m and n: ");
+    scanf ("%d %d", &m, &n);
+    
+    int Ar[size]={34,82,49,102,7,94,23,11,50,31};
+    
+    for (int i=m; i<(m+((n-m)/2)) ; i++){  //shift formula
+        int temp = Ar[i];
+        Ar[i]= Ar[m+n-i];
+        Ar[m+n-i]= temp;
+        
+    }
+    
+    for (int i=0; i<size; i++){ //printing
+        printf ("%d ", Ar[i]);
+    }
+}
