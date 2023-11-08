@@ -1,0 +1,18 @@
+#include<stdio.h>
+#define size 5 //year
+int main() {
+    float CI [size]={100,100,100,100,100};
+    int y, ir; //ir 1% kore bare
+    
+    printf ("Enter interest rate, year: ");
+    scanf ("%d %d", &ir, &y);
+    
+    for (int i=0; i<y; i++) {
+        for (int j=0; j<size; j++){
+            CI[j]=CI[j]+((CI[j]*(j+ir))/100);
+            printf ("%.2f\t", CI[j]);
+        }
+        printf ("\n");
+    }
+    
+}
