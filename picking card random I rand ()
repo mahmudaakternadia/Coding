@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main (){
+    const char suit [4]= {'c','d','h','s'};
+    const char rank [13] = {'2', '3','4','5','6','7','8','9','t','j','q','k','a'};
+    
+    int n;
+    
+    printf ("How many cards to choose: ");
+    scanf ("%d", &n);
+    
+    char cards [n][2]; //joto card toto row
+                      //colum2 nibo always cz rank and suit
+    printf ("Your hand: ");
+    for (int i=0; i<n; i++){
+        cards[i][0]= rank [rand()%13];
+        cards [i][1]= suit[rand()%4];
+        printf ("%c%c ", cards[i][0], cards[i][1]);
+    }
+    
+}
