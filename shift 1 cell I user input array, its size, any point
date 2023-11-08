@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main (){
+    
+    int size;
+    printf ("Enter array size: ");
+    scanf ("%d", &size);
+    
+    int Ar[size];
+    
+    printf ("Enter %d size array: ", size);
+    
+    for (int i=0; i<10; i++){ //input array
+        scanf ("%d", &Ar[i]);
+    }
+    
+    int m,n; //index value
+    printf ("Enter which point to which: m, n:");
+    scanf ("%d %d", &m, &n);
+    
+    for (int i=m; i<(m+((n-m)/2)); i++) { //shift formula
+        int temp = Ar[i];
+        Ar[i]= Ar[m+n-i];
+        Ar[m+n-i]=temp;
+        
+    }
+    
+    for (int i=0; i<size; i++) { //printing
+        printf ("%d ", Ar[i]);
+    }
+    
+    
+}
