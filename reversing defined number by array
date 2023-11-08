@@ -1,0 +1,16 @@
+#include<stdio.h>
+#define size 10
+int main(){
+
+    int Ar[size]={34,82,49,102,7,94,23,11,50,31};
+    
+    for (int i=0; i<size/2 ; i++){
+        int temp = Ar[i];
+        Ar[i]= Ar[size-1-i];
+        Ar[size-1-i]= temp;
+    }
+    
+    for (int i=0; i<size; i++){
+        printf ("%d ", Ar[i]);
+    }
+}
