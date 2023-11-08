@@ -1,0 +1,23 @@
+#include<stdio.h>
+#define size 10
+int main(){
+    
+    int n;  //user input for how shifts wanted
+    
+    printf ("how many times shift: ");
+    scanf ("%d", &n);
+    
+    int Ar[size]={34,82,49,102,7,94,23,11,50,31};
+    
+    for (int i=1; i<n ; i++) {  //for n times shift
+        for (int i=0; i<size/2 ; i++){  //shift formula
+        int temp = Ar[i];
+        Ar[i]= Ar[size-1-i];
+        Ar[size-1-i]= temp;
+        }
+    }
+    
+    for (int i=0; i<size; i++){ //printing
+        printf ("%d ", Ar[i]);
+    }
+}
